@@ -10,24 +10,24 @@ RSpec.describe 'Method Exercises' do
     end
 
     # remove the 'x' from the line below to unskip the test
-    xit 'returns a lowercase z' do
+    it 'returns a lowercase z' do
       expect(ascii_translator(122)).to eq('z')
     end
 
-    xit 'returns an exclamation mark' do
+    it 'returns an exclamation mark' do
       expect(ascii_translator(33)).to eq('!')
     end
   end
 
   describe 'common sports exercise using #intersection' do
 
-    xit 'returns the common sports' do
+    it 'returns the common sports' do
       current = ['tennis', 'football', 'baseball']
       favorite = ['baseball', 'tennis', 'basketball']
       expect(common_sports(current, favorite)).to eq(['tennis', 'baseball'])
     end
 
-    xit 'returns an empty array when there are no common sports' do
+    it 'returns an empty array when there are no common sports' do
       current = ['tennis', 'football', 'wrestling']
       favorite = ['baseball', 'basketball']
       expect(common_sports(current, favorite)).to eq([])
