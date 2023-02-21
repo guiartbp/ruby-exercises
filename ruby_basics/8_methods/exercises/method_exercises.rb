@@ -1,3 +1,5 @@
+require 'pry-byebug'
+
 # Since lesson #8 is on methods, you will be writing the entire method.
 # To gain more familiarity, look up the documentation for each hint.
 # Remember to unskip the corresponding tests one at a time.
