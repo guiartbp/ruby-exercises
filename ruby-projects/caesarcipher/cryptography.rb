@@ -35,12 +35,3 @@ end
 phrase_for_crypt = gets.chomp
 code_for_crypt = gets.to_i
 caesar_cipher(phrase_for_crypt, code_for_crypt)
-
-
-# 1 - transformar em ascii
-# 2 - calcular
-#     I- se o numero é maior que Z(90) ou z(122)
-#         * subtrair por 25
-#     II- se o número é menor que A(65) ou a(97)
-#         * somar por 25
-# 3 - criptografar
