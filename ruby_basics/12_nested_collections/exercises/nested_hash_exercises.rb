@@ -13,8 +13,8 @@ end
 def add_information_about_language(languages, language_name, info_key, info_value)
   # Take languages and add the key/value pair info_key/info_value to the nested
   # hash of language_name, then return the updated languages hash
-    languages[language_name][info_key] = info_value
-    languages
+  languages[language_name][info_key] = info_value
+  languages
 end
 
 def add_language(languages, language_name, language_info_value)
@@ -41,7 +41,7 @@ end
 def find_beautiful_languages(languages)
   # Take languages and return a hash containing only languages which have the
   # key/value pair { is_beautiful?: true } listed in their information
-  languages.select{|name, data| data[:is_beautiful?] == true}
+  languages.select { |_name, data| data[:is_beautiful?] == true }
 end
 
 def find_language_facts(languages, language_name, fact_index = 0)

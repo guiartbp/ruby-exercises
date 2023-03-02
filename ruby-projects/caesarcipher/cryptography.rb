@@ -1,36 +1,36 @@
 def is_upper?(string)
-    not string.match /[[:lower:]]/
+  !string.match(/[[:lower:]]/)
 end
 
 def is_lower?(string)
-    not string.match /[[:upper:]]/
+  !string.match(/[[:upper:]]/)
 end
 
 def letter?(string)
-    string.match?(/[[:alpha:]]/)
+  string.match?(/[[:alpha:]]/)
 end
 
 def numeric?(number)
-    number.match?(/[[:digit:]]/)
+  number.match?(/[[:digit:]]/)
 end
 
 def caesar_cipher(string, code)
-    phrase = string.bytes
+  phrase = string.bytes
 
-    for i in 0..(phrase.length-1) do
+  for i in 0..(phrase.length - 1) do
 
-        if letter?(string[i])
+    if letter?(string[i])
 
-            if is_lower?(string[i])
-                phrase[i] = (((phrase[i] - 97) + code) % 26) + 97
+      if is_lower?(string[i])
+        phrase[i] = (((phrase[i] - 97) + code) % 26) + 97
 
-            elsif is_upper?(string[i])
-                phrase[i] = (((phrase[i] - 65) + code) % 26) + 65
-            end
-        end 
+      elsif is_upper?(string[i])
+        phrase[i] = (((phrase[i] - 65) + code) % 26) + 65
+      end
     end
-    
-    print phrase.pack('c*')
+  end
+
+  print phrase.pack('c*')
 end
 phrase_for_crypt = gets.chomp
 code_for_crypt = gets.to_i

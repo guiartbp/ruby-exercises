@@ -11,7 +11,7 @@ def blank_seating_chart(number_of_rows, seats_per_row)
 
   # NOTE: if one of the nested arrays is changed, the others should **not**
   # change with it
-  changed = Array.new(number_of_rows) {Array.new(seats_per_row)}
+  changed = Array.new(number_of_rows) { Array.new(seats_per_row) }
 end
 
 def add_seat_to_row(chart, row_index, seat_to_add)
@@ -68,6 +68,5 @@ def find_favorite(array_of_hash_objects)
   # TIP: there will only be a maximum of one hash in the array that will
   # return true to the :is_my_favorite? key
 
-  array_of_hash_objects.select {|object| object[:is_my_favorite?] == true}.first
-
+  array_of_hash_objects.select { |object| object[:is_my_favorite?] == true }.first
 end
